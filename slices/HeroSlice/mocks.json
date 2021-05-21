@@ -1,0 +1,41 @@
+[
+  {
+    "id": "default-slice",
+    "name": "Default slice",
+    "docURL": "...",
+    "version": "sktwi1xtmkfgx8626",
+    "description": "HeroSlice",
+    "primary": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Grow dynamic users",
+          "spans": []
+        }
+      ],
+      "description": [
+        {
+          "type": "heading1",
+          "text": "Whiteboard seamless e-markets",
+          "spans": []
+        }
+      ],
+      "heroLink": {
+        "link_type": "Web",
+        "url": "http://twitter.com"
+      },
+      "linkLabel": "cultivate proactive solutions",
+      "heroImage": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": "Placeholder image",
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1490535004195-099bc723fa1f?w=900&h=500&fit=crop"
+      }
+    },
+    "items": [],
+    "slice_type": "hero_slice"
+  }
+]

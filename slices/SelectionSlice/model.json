@@ -1,0 +1,53 @@
+{
+  "id": "selection_slice",
+  "type": "SharedSlice",
+  "name": "SelectionSlice",
+  "description": "SelectionSlice",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "SelectionSlice",
+      "primary": {
+        "description": {
+          "config": {
+            "label": "Description",
+            "placeholder": "A nice description of your feature",
+            "allowTargetBlank": true,
+            "single": "paragraph,heading2"
+          },
+          "type": "StructuredText"
+        }
+      },
+      "items": {
+        "product-image": {
+          "type": "Image",
+          "config": {
+            "id": "product-image",
+            "label": "",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "description": {
+          "type": "Text",
+          "config": {
+            "label": "",
+            "id": "description",
+            "placeholder": ""
+          }
+        },
+        "price": {
+          "type": "Number",
+          "config": {
+            "label": "",
+            "id": "price",
+            "placeholder": ""
+          }
+        }
+      }
+    }
+  ]
+}

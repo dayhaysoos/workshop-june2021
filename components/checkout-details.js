@@ -16,16 +16,13 @@ function CheckoutDetails() {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const response = await fetch(
-      '/.netlify/functions/next_api_create_session',
-      {
-        method: 'post',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(cartDetails),
-      }
-    )
+    const response = await fetch('/api/create_session', {
+      method: 'post',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(cartDetails),
+    })
       .then((res) => {
         return res.json();
       })
@@ -88,7 +85,7 @@ function CheckoutDetails() {
         </tbody>
       </Box>
       <Flex sx={{ justifyContent: 'space-evenly', alignItems: 'center' }}>
-        <Button onClick={handleCartClick}>Close</Button>
+        <Button onClick={() => handleCartClick}>Close</Button>
         <Button onClick={handleSubmit}>Checkout</Button>
       </Flex>
     </Box>

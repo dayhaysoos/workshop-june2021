@@ -11,9 +11,21 @@ import {
   useColorMode,
 } from 'theme-ui';
 
+import { Client } from '../prismic';
+import SliceZone from 'next-slicezone';
+import { useGetStaticProps } from 'next-slicezone/hooks';
+import resolver from '../sm-resolver';
+
 import Layout from '../components/layout';
 
-const IndexPage = () => {
+export const getStaticProps = useGetStaticProps({
+  client: Client(),
+  uid: () => 'home',
+});
+
+const Page = (props) => <SliceZone {...props} resolver={resolver} />;
+
+const IndexPage = (props) => {
   const [colorMode, setColorMode] = useColorMode();
   return (
     <Layout>
@@ -23,82 +35,9 @@ const IndexPage = () => {
         }}>
         Toggle {colorMode === 'default' ? 'Dark' : 'Light'}
       </Button>
-      <Container>
-        <Heading as='h1'>Very Good Fruit Store</Heading>
-        <Grid gap={20} columns={[1, 2, 3]}>
-          <Card>
-            <Heading>Fresh</Heading>
-            <Text variant={'text.default'}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-              tempor urna in orci porttitor, sit amet molestie lorem imperdiet.
-              Cras fermentum arcu nec ante egestas, sit amet rhoncus nunc
-              finibus. Pellentesque eget dapibus velit.
-            </Text>
-          </Card>
-          <Card>
-            <Heading>Tasty</Heading>
-            <Text variant={'text.default'}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-              tempor urna in orci porttitor, sit amet molestie lorem imperdiet.
-              Cras fermentum arcu nec ante egestas, sit amet rhoncus nunc
-              finibus. Pellentesque eget dapibus velit.
-            </Text>
-          </Card>
-          <Card>
-            <Heading>Organic</Heading>
-            <Text variant={'text.default'}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-              tempor urna in orci porttitor, sit amet molestie lorem imperdiet.
-              Cras fermentum arcu nec ante egestas, sit amet rhoncus nunc
-              finibus. Pellentesque eget dapibus velit.
-            </Text>
-          </Card>
-        </Grid>
-        <Grid columns={[1, 2]}>
-          <Box>
-            <Image
-              alt='Picture of Bill Murray'
-              sx={{ backgroundSize: 'contain' }}
-              src={'https://www.fillmurray.com/400/300'}
-            />
-          </Box>
-          <Box>
-            <Heading>This store is great</Heading>
-            <Text variant={'text.default'}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-              tempor urna in orci porttitor, sit amet molestie lorem imperdiet.
-              Cras fermentum arcu nec ante egestas, sit amet rhoncus nunc
-              finibus. Pellentesque eget dapibus velit. Lorem ipsum dolor sit
-              amet, consectetur adipiscing elit. Integer tempor urna in orci
-              porttitor, sit amet molestie lorem imperdiet. Cras fermentum arcu
-              nec ante egestas, sit amet rhoncus nunc finibus. Pellentesque eget
-              dapibus velit.
-            </Text>
-          </Box>
-        </Grid>
-        <Grid columns={[1, 2, 2]}>
-          <Box>
-            <Heading>This store is great</Heading>
-            <Text variant={'text.default'}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-              tempor urna in orci porttitor, sit amet molestie lorem imperdiet.
-              Cras fermentum arcu nec ante egestas, sit amet rhoncus nunc
-              finibus. Pellentesque eget dapibus velit. Lorem ipsum dolor sit
-              amet, consectetur adipiscing elit. Integer tempor urna in orci
-              porttitor, sit amet molestie lorem imperdiet. Cras fermentum arcu
-              nec ante egestas, sit amet rhoncus nunc finibus. Pellentesque eget
-              dapibus velit.
-            </Text>
-          </Box>
-          <Box>
-            <Image
-              alt='Picture of Bill Murray'
-              sx={{ backgroundSize: 'contain' }}
-              src={'https://www.fillmurray.com/400/300'}
-            />
-          </Box>
-        </Grid>
-      </Container>
+      <section style={{ width: '100%', height: '100%' }}>
+        <SliceZone {...props} resolver={resolver} />
+      </section>
     </Layout>
   );
 };

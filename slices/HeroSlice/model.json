@@ -1,0 +1,60 @@
+{
+  "id": "hero_slice",
+  "type": "SharedSlice",
+  "name": "HeroSlice",
+  "description": "HeroSlice",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "HeroSlice",
+      "primary": {
+        "title": {
+          "config": {
+            "label": "Title",
+            "placeholder": "This is where it all begins...",
+            "allowTargetBlank": true,
+            "single": "heading1"
+          },
+          "type": "StructuredText"
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "single": "paragraph",
+            "label": "Description",
+            "placeholder": "A nice description of your feature"
+          }
+        },
+        "heroLink": {
+          "type": "Link",
+          "config": {
+            "label": "",
+            "id": "heroLink",
+            "placeholder": "",
+            "allowTargetBlank": true
+          }
+        },
+        "linkLabel": {
+          "type": "Text",
+          "config": {
+            "label": "",
+            "id": "linkLabel",
+            "placeholder": ""
+          }
+        },
+        "heroImage": {
+          "config": {
+            "label": "background-image",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        }
+      },
+      "items": {}
+    }
+  ]
+}
