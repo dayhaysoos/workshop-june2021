@@ -1,30 +1,31 @@
 import React from 'react';
 import { RichText } from 'prismic-reactjs';
+import { Flex, Box } from 'theme-ui';
 
 const MySlice = ({ slice }) => (
   <section>
-    <span className="title">
-      {
-        slice.primary.title ?
-        <RichText render={slice.primary.title}/>
-        : <h2>Template slice, update me!</h2>
-      }
+    <span className='title'>
+      <RichText render={slice.primary.description} />
     </span>
-    {
-      slice.primary.description ?
-      <RichText render={slice.primary.description}/>
-      : <p>start by editing this slice from inside the SliceMachine builder!</p>
-    }
-    <style jsx>{`
-        section {
-          max-width: 600px;
-          margin: 4em auto;
-          text-align: center;
-        }
-        .title {
-          color: #8592e0;
-        }
-    `}</style>
+    <Flex>
+      {slice?.items?.map((item, i) => {
+        return (
+          <Box>
+            <img
+              width='100%'
+              src={item['product-image'].url}
+              alt={item['product-image'].alt}
+              key={`img-${i}`}
+              style={{ marginBottom: '16px' }}
+            />
+            <Flex sx={{ justifyContent: 'space-between', padding: '8px' }}>
+              <span>{item.description}</span>
+              <span key={`item.price-${i}`}>{item.price}</span>
+            </Flex>
+          </Box>
+        );
+      })}
+    </Flex>
   </section>
 );
 

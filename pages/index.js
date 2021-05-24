@@ -23,8 +23,6 @@ export const getStaticProps = useGetStaticProps({
   uid: () => 'home',
 });
 
-const Page = (props) => <SliceZone {...props} resolver={resolver} />;
-
 const IndexPage = (props) => {
   const [colorMode, setColorMode] = useColorMode();
   return (

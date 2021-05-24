@@ -8,7 +8,9 @@ const MySlice = ({ slice }) => (
       backgroundImage: `url(${slice.primary.heroImage.url}})`,
       height: '300px',
       width: '100%',
-      backgroundRepeat: 'none',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center',
+      backgroundSize: 'contain',
     }}>
     <span className='title'>
       {slice.primary.title ? (
