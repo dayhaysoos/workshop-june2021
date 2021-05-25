@@ -3,7 +3,7 @@ const queryRepeatableDocuments =
   require('../../queries').queryRepeatableDocuments;
 
 const validateCartItems =
-  require('use-shopping-cart/utilities').validateCartItems;
+  require('use-shopping-cart/utilities/serverless').validateCartItems;
 
 export default async (req, res) => {
   const productJSON = req.body;
