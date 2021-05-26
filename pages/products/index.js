@@ -9,11 +9,11 @@ import { Heading } from '@theme-ui/components';
 
 export async function getStaticProps() {
   const products = await queryRepeatableDocuments(
-    (doc) => doc.type === 'products'
+    (doc) => doc.type === 'product_collection'
   );
   return {
     props: {
-      products: products[0].data.productcatalog,
+      products: products[0].data.products,
     },
   };
 }

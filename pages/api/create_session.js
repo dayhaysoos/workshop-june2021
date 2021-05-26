@@ -8,19 +8,13 @@ const validateCartItems =
 export default async (req, res) => {
   const productJSON = req.body;
 
-  const products = await queryRepeatableDocuments(
-    (docs) => docs.type === 'products'
+  const collection = await queryRepeatableDocuments(
+    (docs) => docs.type === 'product_collection'
   );
 
-  const inventorySrc = products[0].data.productcatalog.map((p) => {
-    return {
-      ...p.product,
-      name: p.product.title,
-      sku: p.product.sku.toString(),
-      price: 10000,
-      image: p.product.image_url,
-      currency: 'usd',
-    };
+  const inventorySrc = collection[0].data.products.map((p) => {
+    const { product } = p;
+    return { ...product, description: p.description };
   });
 
   const line_items = validateCartItems(inventorySrc, productJSON);

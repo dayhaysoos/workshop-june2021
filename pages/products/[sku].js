@@ -1,13 +1,10 @@
 import React from 'react';
 import Head from 'next/head';
 import Product from '../../components/product';
-import { RichText } from 'prismic-reactjs';
 
 import { queryRepeatableDocuments } from '../../queries';
 
 import Layout from '../../components/layout';
-
-import { Client } from '../../prismic';
 
 const ProductPage = ({ product }) => {
   return (
@@ -18,12 +15,12 @@ const ProductPage = ({ product }) => {
 };
 
 export async function getStaticPaths() {
-  const products = await queryRepeatableDocuments(
-    (docs) => docs.type === 'products'
+  const collection = await queryRepeatableDocuments(
+    (docs) => docs.type === 'product_collection'
   );
 
   return {
-    paths: products[0].data.productcatalog.map((prod) => {
+    paths: collection[0].data.products.map((prod) => {
       return `/products/${prod.product.sku}`;
     }),
     fallback: true,
@@ -31,17 +28,19 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const products = await queryRepeatableDocuments(
-    (docs) => docs.type === 'products'
+  const collection = await queryRepeatableDocuments(
+    (docs) => docs.type === 'product_collection'
   );
 
-  const selectedProduct = products[0].data.productcatalog.find((prod) => {
-    return prod.product.sku === parseInt(params.sku);
+  const selectedProduct = collection[0].data.products.find((prod) => {
+    return prod.product.sku === params.sku;
   });
-
   return {
     props: {
-      product: { ...selectedProduct.product, ...selectedProduct, price: 10000 },
+      product: {
+        ...selectedProduct.product,
+        description: selectedProduct.product.description,
+      },
     },
   };
 }
