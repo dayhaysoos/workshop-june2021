@@ -6,7 +6,7 @@ function SkipLink() {
       href='#main'
       style={{
         position: 'absolute',
-        backgroundColor: 'white',
+        backgroundColor: 'black',
         height: 50,
         width: '200px',
         display: 'flex',

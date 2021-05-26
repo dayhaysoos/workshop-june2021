@@ -2,12 +2,14 @@ export default {
   colors: {
     text: '#000',
     background: '#fff',
-    primary: 'teal',
+    primary: '#fff',
+    secondary: '#000',
     modes: {
       dark: {
         text: '#fff',
         background: '#000',
-        primary: 'teal',
+        primary: '#000',
+        secondary: '#fff',
       },
     },
   },
@@ -37,6 +39,15 @@ export default {
     py: 2,
     my: 2,
   },
+  buttons: {
+    primary: {
+      color: 'secondary',
+      border: '1px solid black',
+    },
+    header: {
+      color: 'secondary',
+    },
+  },
   text: {
     default: {
       color: 'text',
@@ -50,11 +61,10 @@ export default {
   },
   links: {
     nav: {
-      color: 'white',
+      color: 'text',
       transition: '0.5s all ease',
       '&:hover, &:focus': {
         transform: 'scale(1.1)',
-        color: 'white',
       },
     },
   },

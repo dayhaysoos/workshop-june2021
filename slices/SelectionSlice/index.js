@@ -3,7 +3,7 @@ import { RichText } from 'prismic-reactjs';
 import { Flex, Box } from 'theme-ui';
 
 const MySlice = ({ slice }) => (
-  <section>
+  <section style={{ marginBottom: '16px' }}>
     <span className='title'>
       <RichText render={slice.primary.description} />
     </span>

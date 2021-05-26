@@ -45,19 +45,15 @@ const Header = () => {
         </Link>
         <ShoppingCartIcon />
         {!user ? (
-          <Button
-            sx={{ backgroundColor: 'transparent', color: 'white' }}
-            onClick={() => netlifyIdentity.open()}>
+          <Button variant='header' onClick={() => netlifyIdentity.open()}>
             Log in
           </Button>
         ) : (
           <Flex>
-            <Button
-              sx={{ backgroundColor: 'transparent', color: 'white' }}
-              onClick={() => netlifyIdentity.logout()}>
+            <Button variant='header' onClick={() => netlifyIdentity.logout()}>
               Log out
             </Button>
-            <Box as={'p'} sx={{ p: 2, color: 'white' }}>
+            <Box as={'p'} sx={{ p: 2 }}>
               {user.user_metadata.full_name}
             </Box>
           </Flex>

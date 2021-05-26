@@ -1,0 +1,52 @@
+{
+  "id": "focus_slice",
+  "type": "SharedSlice",
+  "name": "FocusSlice",
+  "description": "FocusSlice",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "FocusSlice",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading1",
+            "label": "Title",
+            "placeholder": "This is where it all begins..."
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "single": "paragraph",
+            "label": "Description",
+            "placeholder": "A nice description of your feature"
+          }
+        },
+        "categorylink": {
+          "type": "Link",
+          "config": {
+            "label": "",
+            "id": "categorylink",
+            "placeholder": "",
+            "allowTargetBlank": true
+          }
+        },
+        "focusimage": {
+          "type": "Image",
+          "config": {
+            "id": "focusimage",
+            "label": "",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

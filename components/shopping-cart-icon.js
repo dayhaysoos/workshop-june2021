@@ -17,6 +17,7 @@ function ShoppingCartIcon() {
 
   return (
     <Button
+      variant='header'
       onClick={handleCartClick}
       aria-label='Checkout'
       aria-describedby='cart-count-description'

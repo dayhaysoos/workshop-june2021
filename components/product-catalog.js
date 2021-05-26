@@ -10,6 +10,7 @@ function ProductCatalog({ products }) {
         const { image_url, sku, title } = product;
         return (
           <Flex
+            key={sku}
             sx={{
               padding: '8px',
               flexDirection: 'column',
@@ -21,7 +22,7 @@ function ProductCatalog({ products }) {
                 borderColor: 'black',
               },
             }}>
-            <Link key={sku} href={`/products/${sku}`}>
+            <Link href={`/products/${sku}`}>
               <a>
                 <Paragraph
                   sx={{ fontSize: '18px', marginBottom: '8px' }}

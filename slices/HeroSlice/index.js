@@ -11,6 +11,7 @@ const MySlice = ({ slice }) => (
       backgroundRepeat: 'no-repeat',
       backgroundPosition: 'center',
       backgroundSize: 'contain',
+      marginBottom: '16px',
     }}>
     <span className='title'>
       {slice.primary.title ? (

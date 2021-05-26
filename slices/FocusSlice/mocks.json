@@ -1,0 +1,40 @@
+[
+  {
+    "id": "default-slice",
+    "name": "Default slice",
+    "docURL": "...",
+    "version": "sktwi1xtmkfgx8626",
+    "description": "FocusSlice",
+    "primary": {
+      "title": [
+        {
+          "type": "paragraph",
+          "text": "Dolore anim do deserunt tempor cupidatat eiusmod culpa laboris ut sunt eiusmod et irure. Qui dolore nisi duis.",
+          "spans": []
+        }
+      ],
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "Nisi amet nostrud nisi duis.",
+          "spans": []
+        }
+      ],
+      "categorylink": {
+        "link_type": "Web",
+        "url": "https://slicemachine.dev"
+      },
+      "focusimage": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": "Placeholder image",
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482?w=900&h=500&fit=crop"
+      }
+    },
+    "items": [],
+    "slice_type": "focus_slice"
+  }
+]

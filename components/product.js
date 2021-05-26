@@ -3,7 +3,6 @@ import { Flex, Box, Heading, Image, Paragraph, Button } from 'theme-ui';
 import { formatCurrencyString, useShoppingCart } from 'use-shopping-cart';
 
 function Product({ product }) {
-  console.log('prod', product);
   const { description, image_url, title, sku, price } = product;
 
   const { addItem } = useShoppingCart();

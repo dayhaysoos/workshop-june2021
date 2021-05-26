@@ -17,7 +17,7 @@ function Select({ max = 10, cartItem }) {
       value={cartItem.quantity}
       fontSize={'20px'}
       onChange={(event) => {
-        setItemQuantity(cartItem.sku, event.target.value);
+        setItemQuantity(cartItem.sku, parseInt(event.target.value));
       }}>
       {options}
     </select>
