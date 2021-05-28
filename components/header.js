@@ -4,6 +4,7 @@ import Link from 'next/link';
 import PropTypes from 'prop-types';
 import ShoppingCartIcon from './shopping-cart-icon';
 import { IdentityContext } from '../context/identity-context';
+import { useShoppingCart } from 'use-shopping-cart';
 
 const Dashboard = () => {
   return <h2>This is the dashboard</h2>;
@@ -11,6 +12,7 @@ const Dashboard = () => {
 
 const Header = () => {
   const { user, identity: netlifyIdentity } = useContext(IdentityContext);
+  const { cartCount, handleCartClick } = useShoppingCart();
 
   return (
     <Box
@@ -43,7 +45,9 @@ const Header = () => {
         <Link href={'/contact'}>
           <NavLink as={'a'}>Contact</NavLink>
         </Link>
-        <ShoppingCartIcon />
+        <Button onClick={() => handleCartClick()} variant='header'>
+          Cart({cartCount})
+        </Button>
         {!user ? (
           <Button variant='header' onClick={() => netlifyIdentity.open()}>
             Log in

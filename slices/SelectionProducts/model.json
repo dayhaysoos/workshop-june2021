@@ -1,0 +1,40 @@
+{
+  "id": "selection_products",
+  "type": "Slice",
+  "name": "SelectionProducts",
+  "description": "Selection Products",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "choices": {
+        "selection_products": {
+          "type": "Slice",
+          "fieldset": "Selection_Products",
+          "description": "Selection Products",
+          "icon": "image",
+          "display": "list",
+          "non-repeat": {
+            "title": {
+              "type": "StructuredText",
+              "config": {
+                "single": "heading1,heading2,heading3,heading4,heading5,heading6",
+                "label": "title"
+              }
+            }
+          },
+          "repeat": {
+            "selected_product": {
+              "type": "IntegrationFields",
+              "config": {
+                "catalog": "workshop-june2021--products",
+                "label": "selected_product"
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -22,5 +22,15 @@
       }
     }
   },
-  "FocusSlice": {}
+  "FocusSlice": {},
+  "BigCopy": {
+    "primary": {
+      "description": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      }
+    }
+  }
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import { RichText } from 'prismic-reactjs';
 import { Flex, Box } from 'theme-ui';
 
-const MySlice = ({ slice }) => (
+const SelectionSlice = ({ slice }) => (
   <section style={{ marginBottom: '16px' }}>
     <span className='title'>
       <RichText render={slice.primary.description} />
@@ -10,7 +10,7 @@ const MySlice = ({ slice }) => (
     <Flex>
       {slice?.items?.map((item, i) => {
         return (
-          <Box>
+          <Box key={item + i}>
             <img
               width='100%'
               src={item['product-image'].url}
@@ -29,4 +29,4 @@ const MySlice = ({ slice }) => (
   </section>
 );
 
-export default MySlice;
+export default SelectionSlice;

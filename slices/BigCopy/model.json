@@ -1,0 +1,27 @@
+{
+  "id": "big_copy",
+  "type": "SharedSlice",
+  "name": "BigCopy",
+  "description": "BigCopy",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "BigCopy",
+      "primary": {
+        "description": {
+          "config": {
+            "label": "Description",
+            "placeholder": "A nice description of your feature",
+            "allowTargetBlank": true,
+            "single": "heading3"
+          },
+          "type": "StructuredText"
+        }
+      },
+      "items": {}
+    }
+  ]
+}

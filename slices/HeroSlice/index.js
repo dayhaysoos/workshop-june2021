@@ -2,7 +2,7 @@ import React from 'react';
 import { RichText } from 'prismic-reactjs';
 import { Link } from 'prismic-reactjs';
 
-const MySlice = ({ slice }) => (
+const HeroSlice = ({ slice }) => (
   <section
     style={{
       backgroundImage: `url(${slice.primary.heroImage.url}})`,
@@ -32,4 +32,4 @@ const MySlice = ({ slice }) => (
   </section>
 );
 
-export default MySlice;
+export default HeroSlice;
