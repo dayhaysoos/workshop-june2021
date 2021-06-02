@@ -1,0 +1,62 @@
+{
+  "id": "product_slice",
+  "type": "SharedSlice",
+  "name": "ProductSlice",
+  "description": "ProductSlice",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "ProductSlice",
+      "primary": {
+        "brand": {
+          "config": {
+            "label": "Brand",
+            "placeholder": "Brand name",
+            "allowTargetBlank": true,
+            "single": "heading1,heading2"
+          },
+          "type": "StructuredText"
+        },
+        "product-name": {
+          "config": {
+            "label": "Product Name",
+            "placeholder": "Product Name",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl,heading2"
+          },
+          "type": "StructuredText"
+        },
+        "callout": {
+          "config": {
+            "label": "Callout",
+            "placeholder": "Callout",
+            "allowTargetBlank": true,
+            "single": "list-item"
+          },
+          "type": "StructuredText"
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "single": "paragraph",
+            "label": "Description",
+            "placeholder": "A nice description of your feature"
+          }
+        },
+        "features": {
+          "config": {
+            "label": "Features",
+            "placeholder": "Features",
+            "allowTargetBlank": true,
+            "single": "list-item"
+          },
+          "type": "StructuredText"
+        }
+      },
+      "items": {}
+    }
+  ]
+}

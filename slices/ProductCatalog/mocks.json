@@ -1,20 +1,55 @@
-[{
-  "id": "default-slice",
-  "name": "Default slice",
-  "docURL": "...",
-  "version": "sktwi1xtmkfgx8626",
-  "description": "ProductCatalog",
-  "primary": {
-    "title": [{
-      "type": "heading1",
-      "text": "This is where it all begins...",
-      "spans": []
-    }],
-    "description": [{
-      "type": "paragraph",
-      "text": "start by editing this slice from inside the SliceMachine builder!",
-      "spans": []
-    }]
-  },
-  "slice_type": "product_catalog"
-}]
+[
+  {
+    "id": "default-slice",
+    "name": "Default slice",
+    "docURL": "...",
+    "version": "sktwi1xtmkfgx8626",
+    "description": "ProductCatalog",
+    "primary": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Iterate viral models",
+          "spans": []
+        }
+      ],
+      "description": [
+        {
+          "type": "heading1",
+          "text": "Whiteboard dynamic initiatives",
+          "spans": []
+        }
+      ],
+      "brand": [
+        {
+          "type": "paragraph",
+          "text": "Fugiat culpa excepteur incididunt aute culpa. Ullamco sint fugiat amet sit aliquip sit cillum aliquip mollit. Cillum mollit est exercitation ad et occaecat in cillum aute aliqua incididunt exercitation commodo proident consequat.",
+          "spans": []
+        }
+      ],
+      "callout": [
+        {
+          "type": "paragraph",
+          "text": "Laboris qui enim fugiat sit sunt do elit do eu quis. Laborum dolore magna non. Duis exercitation exercitation fugiat eiusmod nulla non dolore esse deserunt deserunt elit.",
+          "spans": []
+        }
+      ],
+      "features": [
+        {
+          "type": "paragraph",
+          "text": "Et nulla pariatur pariatur in pariatur sint labore qui fugiat Lorem aliqua dolor laboris deserunt. Lorem labore dolor cillum id sunt. Deserunt mollit id esse irure laboris Lorem esse non velit in labore consectetur aute commodo elit.",
+          "spans": []
+        }
+      ],
+      "description-header": [
+        {
+          "type": "heading3",
+          "text": "Integrate interactive communities",
+          "spans": []
+        }
+      ]
+    },
+    "items": [],
+    "slice_type": "product_catalog"
+  }
+]

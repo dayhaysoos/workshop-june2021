@@ -3,29 +3,68 @@
   "type": "SharedSlice",
   "name": "ProductCatalog",
   "description": "ProductCatalog",
-  "variations": [{
-    "id": "default-slice",
-    "name": "Default slice",
-    "docURL": "...",
-    "version": "sktwi1xtmkfgx8626",
-    "description": "ProductCatalog",
-    "primary": {
-      "title": {
-        "type": "StructuredText",
-        "config": {
-          "single": "heading1",
-          "label": "Title",
-          "placeholder": "This is where it all begins..."
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "ProductCatalog",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading1",
+            "label": "Title",
+            "placeholder": "This is where it all begins..."
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "single": "paragraph",
+            "label": "Description",
+            "placeholder": "A nice description of your feature"
+          }
+        },
+        "brand": {
+          "config": {
+            "label": "Brand",
+            "placeholder": "Brand",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          },
+          "type": "StructuredText"
+        },
+        "callout": {
+          "config": {
+            "label": "Callout",
+            "placeholder": "Callout",
+            "allowTargetBlank": true,
+            "single": "list-item"
+          },
+          "type": "StructuredText"
+        },
+        "features": {
+          "config": {
+            "label": "Features",
+            "placeholder": "features",
+            "allowTargetBlank": true,
+            "single": "list-item"
+          },
+          "type": "StructuredText"
+        },
+        "description-header": {
+          "config": {
+            "label": "Description Header",
+            "placeholder": "Description Header",
+            "allowTargetBlank": true,
+            "single": "heading3"
+          },
+          "type": "StructuredText"
         }
       },
-      "description": {
-        "type": "StructuredText",
-        "config": {
-          "single": "paragraph",
-          "label": "Description",
-          "placeholder": "A nice description of your feature"
-        }
-      }
+      "items": {}
     }
-  }]
+  ]
 }

@@ -29,17 +29,21 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const collection = await queryRepeatableDocuments(
-    (docs) => docs.type === 'product_collection'
+    (doc) => doc.type === 'product_collection'
   );
 
   const selectedProduct = collection[0].data.products.find((prod) => {
     return prod.product.sku === params.sku;
   });
+
   return {
     props: {
       product: {
         ...selectedProduct.product,
-        description: selectedProduct.product.description,
+        callout: selectedProduct.callout,
+        brand: selectedProduct.brand,
+        description: selectedProduct.description,
+        features: selectedProduct.features,
       },
     },
   };

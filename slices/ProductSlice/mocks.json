@@ -1,0 +1,48 @@
+[
+  {
+    "id": "default-slice",
+    "name": "Default slice",
+    "docURL": "...",
+    "version": "sktwi1xtmkfgx8626",
+    "description": "ProductSlice",
+    "primary": {
+      "brand": [
+        {
+          "type": "heading1",
+          "text": "Incubate clicks-and-mortar initiatives",
+          "spans": []
+        }
+      ],
+      "product-name": [
+        {
+          "type": "paragraph",
+          "text": "Dolore occaecat consequat consequat quis cillum aute. Consequat sint fugiat Lorem ut ea non adipisicing culpa aute cupidatat.",
+          "spans": []
+        }
+      ],
+      "callout": [
+        {
+          "type": "paragraph",
+          "text": "Voluptate nostrud culpa fugiat anim.",
+          "spans": []
+        }
+      ],
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "Cupidatat nostrud id reprehenderit ad excepteur sit magna.",
+          "spans": []
+        }
+      ],
+      "features": [
+        {
+          "type": "paragraph",
+          "text": "Magna in tempor consequat aute dolore dolore sunt. Ex laboris deserunt nisi qui id exercitation culpa anim aliquip mollit sint eiusmod.",
+          "spans": []
+        }
+      ]
+    },
+    "items": [],
+    "slice_type": "product_slice"
+  }
+]
