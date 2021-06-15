@@ -2,45 +2,65 @@ import React from 'react';
 import { Flex, Box, Heading, Image, Paragraph, Button } from 'theme-ui';
 import { formatCurrencyString, useShoppingCart } from 'use-shopping-cart';
 import { RichText } from 'prismic-reactjs';
+import { htmlSerializer } from '../prismic';
+
 function Product({ product }) {
-  const { description, image_url, title, sku, price, features, callout } =
-    product;
+  const {
+    description,
+    image_url,
+    title,
+    sku,
+    price,
+    features,
+    callout,
+    brand,
+  } = product;
 
   const { addItem } = useShoppingCart();
 
   return (
     <>
-      <Flex sx={{ justifyContent: 'space-between' }}>
+      <Flex
+        sx={{
+          justifyContent: 'space-between',
+          flexDirection: ['column', 'column', 'row'],
+        }}>
         <Flex
           sx={{
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
+            flex: 4,
           }}>
           <Image src={image_url} />
         </Flex>
-        <Flex sx={{ flexDirection: 'column', justifyContent: 'center' }}>
+        <Flex
+          sx={{ flexDirection: 'column', justifyContent: 'center', flex: 2 }}>
+          <RichText render={brand} />
           <Heading as='h2'>{title}</Heading>
           <Box as='p' sx={{ fontSize: '24px', marginBottom: '24px' }}>
             {formatCurrencyString({ value: price, currency: 'USD' })}
           </Box>
-          <Paragraph marginBottom='24px' variant={'default'}>
-            {description || ''}
-          </Paragraph>
+
           <Button onClick={() => addItem(product)}>Add to Cart</Button>
           <Box>
-            <ul>
-              <RichText render={callout} />
-            </ul>
+            <RichText render={callout} htmlSerializer={htmlSerializer} />
           </Box>
         </Flex>
       </Flex>
-      <Flex sx={{ justifyContent: 'space-between', alignItems: 'center' }}>
-        <Box>
-          <Heading as='h3'>Description</Heading>
+      <Flex
+        sx={{
+          justifyContent: 'space-between',
+          alignItems: ['start', 'start', 'center'],
+          flexDirection: ['column', 'column', 'row'],
+        }}>
+        <Box sx={{ flex: 4 }}>
+          <Heading as='h2'>Description</Heading>
           <p>{description}</p>
         </Box>
-        <RichText render={features} />
+        <Box sx={{ flex: 2 }}>
+          <RichText render={features} htmlSerializer={htmlSerializer} />
+        </Box>
       </Flex>
     </>
   );

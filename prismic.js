@@ -2,6 +2,21 @@
 
 import Prismic from 'prismic-javascript';
 import Link from 'next/link';
+import { Elements } from 'prismic-reactjs';
+import { Box, Heading } from 'theme-ui';
+
+export const htmlSerializer = function (type, element, content, children, key) {
+  let props = {};
+
+  switch (type) {
+    case Elements.listItem:
+      return <Box as='li' variant='styles.li' {...props} children={children} />;
+    case Elements.h3:
+      return (
+        <Heading as='h3' variant='styles.h3' {...props} children={children} />
+      );
+  }
+};
 
 import smConfig from './sm.json';
 

@@ -1,12 +1,14 @@
 import React from 'react';
 import { Grid, Box, Heading, Image, Paragraph, Flex } from 'theme-ui';
 import Link from 'next/link';
+import { RichText } from 'prismic-reactjs';
+import { htmlSerializer } from '../prismic';
 
 function ProductCatalog({ products }) {
   return (
     <Grid columns={[1, 2, 3]}>
       {products.map((p) => {
-        const { product, description } = p;
+        const { product, brand } = p;
         const { image_url, sku, title } = product;
         return (
           <Flex
@@ -26,11 +28,11 @@ function ProductCatalog({ products }) {
               <a>
                 <Paragraph
                   sx={{ fontSize: '18px', marginBottom: '8px' }}
-                  as='h2'>
+                  as='h3'>
                   {title}
                 </Paragraph>
                 <Image src={image_url} />
-                <Paragraph variant='default'>{description || ''}</Paragraph>
+                <RichText render={brand} htmlSerializer={htmlSerializer} />
               </a>
             </Link>
           </Flex>

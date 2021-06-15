@@ -4,6 +4,7 @@ export default {
     background: '#fff',
     primary: '#fff',
     secondary: '#000',
+    secondaryText: '#fff',
     modes: {
       dark: {
         text: '#fff',
@@ -31,6 +32,19 @@ export default {
       alignItems: 'center',
     },
   },
+  styles: {
+    li: {
+      color: 'text',
+      marginBottom: '8px',
+      marginTop: '8px',
+    },
+    h2: {
+      fontSize: '32px',
+    },
+    h3: {
+      fontSize: '18px',
+    },
+  },
   heading: {
     fontFamily: 'heading',
     fontWeight: 'heading',
@@ -41,11 +55,18 @@ export default {
   },
   buttons: {
     primary: {
-      color: 'secondary',
+      color: 'secondaryText',
       border: '1px solid black',
+      borderRadius: '0',
+      backgroundColor: 'secondary',
     },
     header: {
       color: 'secondary',
+    },
+    select: {
+      border: '1px solid dotted',
+      color: 'text',
+      background: 'background',
     },
   },
   text: {
