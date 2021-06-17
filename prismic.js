@@ -10,7 +10,15 @@ export const htmlSerializer = function (type, element, content, children, key) {
 
   switch (type) {
     case Elements.listItem:
-      return <Box as='li' variant='styles.li' {...props} children={children} />;
+      return (
+        <Box
+          key={key}
+          as='li'
+          variant='styles.li'
+          {...props}
+          children={children}
+        />
+      );
     case Elements.h3:
       return (
         <Heading as='h3' variant='styles.h3' {...props} children={children} />

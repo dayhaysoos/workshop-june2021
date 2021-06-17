@@ -12,6 +12,7 @@
     "export": "next export"
   },
   "dependencies": {
+    "@prismicio/client": "^5.0.0",
     "@reach/dialog": "^0.15.0",
     "essential-slices": "^1.0.4",
     "netlify-identity-widget": "^1.9.1",

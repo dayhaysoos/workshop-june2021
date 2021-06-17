@@ -1,3 +1,4 @@
+import Prismic from '@prismicio/client';
 import { Client } from './prismic';
 
 async function fetchDocs(page = 1, routes = []) {
@@ -17,4 +18,26 @@ export const queryRepeatableDocuments = async (filter) => {
 export const productPageQuery = async () => {
   const allRoutes = await fetchDocs();
   return allRoutes.filter((doc) => doc.type === 'product').slice(0, 5);
+};
+
+export const queryDocsByType = async (type) => {
+  try {
+    const result = await Client().query(
+      Prismic.Predicates.at('document.type', type)
+    );
+
+    return result;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const queryDocByUID = async (uid) => {
+  console.log('yerrrr', uid);
+  try {
+    const result = await Client().getByUID('product', uid);
+    return result;
+  } catch (error) {
+    console.log('error', error);
+  }
 };

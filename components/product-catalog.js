@@ -7,12 +7,12 @@ import { htmlSerializer } from '../prismic';
 function ProductCatalog({ products }) {
   return (
     <Grid columns={[1, 2, 3]}>
-      {products.map((p) => {
-        const { product, brand } = p;
-        const { image_url, sku, title } = product;
+      {products.map((product) => {
+        const { uid, data } = product;
+        const { image_url, title } = data.linked_product;
         return (
           <Flex
-            key={sku}
+            key={uid}
             sx={{
               padding: '8px',
               flexDirection: 'column',
@@ -24,7 +24,7 @@ function ProductCatalog({ products }) {
                 borderColor: 'black',
               },
             }}>
-            <Link href={`/products/${sku}`}>
+            <Link href={`/products/${uid}`}>
               <a>
                 <Paragraph
                   sx={{ fontSize: '18px', marginBottom: '8px' }}
@@ -32,7 +32,7 @@ function ProductCatalog({ products }) {
                   {title}
                 </Paragraph>
                 <Image src={image_url} />
-                <RichText render={brand} htmlSerializer={htmlSerializer} />
+                <RichText render={data.brand} htmlSerializer={htmlSerializer} />
               </a>
             </Link>
           </Flex>

@@ -4,16 +4,15 @@ import Head from 'next/head';
 import { RichText } from 'prismic-reactjs';
 import ProductCatalog from '../../components/product-catalog';
 
-import { queryRepeatableDocuments } from '../../queries';
+import { queryRepeatableDocuments, queryDocsByType } from '../../queries';
 import { Heading } from '@theme-ui/components';
 
 export async function getStaticProps() {
-  const products = await queryRepeatableDocuments(
-    (doc) => doc.type === 'product_collection'
-  );
+  const allProducts = await queryDocsByType('product');
+
   return {
     props: {
-      products: products[0].data.products,
+      products: allProducts.results,
     },
   };
 }
