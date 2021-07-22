@@ -1,6 +1,6 @@
 /** Example file */
 
-import Prismic from 'prismic-javascript';
+import Prismic from '@prismicio/client';
 import Link from 'next/link';
 import { Elements } from 'prismic-reactjs';
 import { Box, Heading } from 'theme-ui';
@@ -26,9 +26,7 @@ export const htmlSerializer = function (type, element, content, children, key) {
   }
 };
 
-import smConfig from './sm.json';
-
-export const apiEndpoint = smConfig.apiEndpoint;
+export const apiEndpoint = 'https://workshop-june2021.cdn.prismic.io/api/v2';
 
 // -- Access Token if the repository is not public
 // Generate a token in your dashboard and configure it here if your repository is private

@@ -2,11 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Product from '../../components/product';
 
-import {
-  queryRepeatableDocuments,
-  queryDocsByType,
-  queryDocByUID,
-} from '../../queries';
+import { queryDocsByType, queryDocByUID } from '../../queries';
 
 import Layout from '../../components/layout';
 
@@ -30,10 +26,6 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const collection = await queryRepeatableDocuments(
-    (doc) => doc.type === 'product_collection'
-  );
-
   const product = await queryDocByUID(params.uid);
 
   return {

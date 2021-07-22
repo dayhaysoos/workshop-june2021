@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Flex, Box, Heading, Image, Paragraph, Button } from 'theme-ui';
 import { formatCurrencyString, useShoppingCart } from 'use-shopping-cart';
 import { RichText } from 'prismic-reactjs';
